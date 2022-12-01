@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Josefin+Sans:ital,wght@0,500;1,500&family=Lato&family=Montserrat:wght@300;400;500&display=swap");
+/* 'Josefin Sans' font */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./Img/galaxy.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  /* height: 100vh; */
+  font-family: "Josefin Sans";
+  display: flex;
+  flex-direction: column;
+  /* horizontally aligning items to center */
+  align-items: center;
+  /* vertically aligning contents to center */
+  justify-content: center;
+  /* aligning texts to center */
+  text-align: center;
+  margin: 0;
+  /* to get rid of scrollbar, overflow will be given as hidden */
+  /* overflow: hidden; */
+  background-color: black;
+}
+
+/* Adding the dark overlay */
+
+body::after {
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* to take all elements in the body over the overlay , we give z-index to 1*/
+
+body * {
+  z-index: 1;
+}
+
+.main-duration-time {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.sub-duration {
+  width: 45px;
+  background-color: rgb(251, 251, 251);
+  margin: 5px;
+  font-size: 44px;
+  padding: 15px;
+  border-radius: 5px;
+  color: rgb(8, 145, 145);
+}
+.sub-duration-names {
+  width: 160px;
+  margin: 5px;
+  font-size: 24px;
+}
+
+.new-year-countdown,
+.birth-day-countdown {
+  background-color: rgb(0 238 255 / 8%);
+  padding: 35px;
+}
+
+.year {
+  font-size: 200px;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.daysdigit,
+.hoursdigit,
+.minutesdigit,
+.secondsdigit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.birth-day-countdown h1,
+.new-year-countdown h1 {
+  background-color: rgba(0, 0, 0, 0.402);
+  padding: 15px;
+}
+@media (max-width: 600px) {
+  .main-duration-time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .year {
+    font-size: 50px;
+  }
+}
