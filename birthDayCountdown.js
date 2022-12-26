@@ -25,19 +25,19 @@ function updateBirthdayCountdown() {
   const birthSECONDS = Math.floor(birthDifference / 1000) % 60;
 
   //DAYS
-  if (birthDAYS < 100) {
+  if (birthDAYS < 10) {
     birthDays1stDigit.innerHTML = "0";
-    birthDays2ndDigit.innerHTML = String(birthDAYS).split("")[0];
-    birthDays3rdDigit.innerHTML = String(birthDAYS).split("")[1];
+    birthDays2ndDigit.innerHTML = "0";
+    birthDays3rdDigit.innerHTML = birthDAYS;
   } else if (birthDAYS > 100) {
     birthDays1stDigit.innerHTML = String(birthDAYS).split("")[0];
     birthDays2ndDigit.innerHTML = String(birthDAYS).split("")[1];
     birthDays3rdDigit.innerHTML = String(birthDAYS).split("")[2];
   } else {
-    // DAYS<10
+    // DAYS<100
     birthDays1stDigit.innerHTML = "0";
-    birthDays1stDigit.innerHTML = "0";
-    birthDays3rdDigit.innerHTML = birthDAYS;
+    birthDays2ndDigit.innerHTML = String(birthDAYS).split("")[0];
+    birthDays3rdDigit.innerHTML = String(birthDAYS).split("")[1];
   }
   // HOURS
   if (birthHOURS < 10) {

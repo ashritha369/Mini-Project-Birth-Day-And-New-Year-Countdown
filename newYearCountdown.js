@@ -29,19 +29,20 @@ function updateCountdown() {
   const SECONDS = Math.floor(difference / 1000) % 60;
 
   //DAYS
-  if (DAYS < 100) {
+  if (DAYS < 10) {
+    // DAYS<10
     days1stDigit.innerHTML = "0";
-    days2ndDigit.innerHTML = String(DAYS).split("")[0];
-    days3rdDigit.innerHTML = String(DAYS).split("")[1];
+    days2ndDigit.innerHTML = "0";
+    days3rdDigit.innerHTML = DAYS;
   } else if (DAYS > 100) {
     days1stDigit.innerHTML = String(DAYS).split("")[0];
     days2ndDigit.innerHTML = String(DAYS).split("")[1];
     days3rdDigit.innerHTML = String(DAYS).split("")[2];
   } else {
-    // DAYS<10
+    // DAYS<100
     days1stDigit.innerHTML = "0";
-    days1stDigit.innerHTML = "0";
-    days3rdDigit.innerHTML = DAYS;
+    days2ndDigit.innerHTML = String(DAYS).split("")[0];
+    days3rdDigit.innerHTML = String(DAYS).split("")[1];
   }
   // HOURS
   if (HOURS < 10) {
